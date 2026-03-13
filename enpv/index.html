@@ -160,10 +160,13 @@ setTimeout(function () {
 document.addEventListener(
   'click',
   function (e) {
-    var link = e.target.closest('a[href*="pay.mycheckoutt.com"]');
+    var link = e.target.closest('a[href*="https://pay.mycheckoutt.com"]');
     if (!link) return;
 
-    ttq.track('CompletePayment');
+    ttq.track('CompletePayment', {
+      value: 23,
+      currency: 'USD'
+    });
   },
   true
 );
@@ -172,10 +175,9 @@ document.addEventListener(
 
 
 
-
-
 </body>
 </html>
+
 
 
 
