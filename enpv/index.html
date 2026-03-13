@@ -164,7 +164,7 @@ document.addEventListener(
     var link = e.target.closest('a[href*="pay.mycheckoutt.com"]');
     if (!link) return;
 
-    ttq.track('InitiateCheckout');
+    ttq.track('CompletePayment');
   },
   true
 );
@@ -177,6 +177,7 @@ document.addEventListener(
 
 </body>
 </html>
+
 
 
 
